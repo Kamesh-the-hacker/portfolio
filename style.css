@@ -1,0 +1,308 @@
+/* =======================
+   Root & Global
+======================= */
+:root {
+  --bg: #02040a;
+  --panel: rgba(0, 120, 255, 0.06);
+  --accent: #1f8cff;
+  --text: #d6e9ff;
+  --muted: #8fbfff;
+  --mono: "Courier New", monospace;
+  --glow: 0 0 10px rgba(31, 140, 255, 0.25),
+          0 0 25px rgba(31, 140, 255, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background:
+    radial-gradient(circle at top, #071426 0%, #02040a 55%),
+    linear-gradient(180deg, rgba(0,0,0,0.9), rgba(0,0,0,1));
+  color: var(--text);
+  font-family: var(--mono);
+  line-height: 1.6;
+}
+
+/* =======================
+   Header
+======================= */
+header {
+  text-align: center;
+  padding: 36px 20px;
+  border-bottom: 1px solid rgba(31, 140, 255, 0.35);
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 2.3rem;
+  color: var(--accent);
+  text-shadow: 0 0 8px rgba(31, 140, 255, 0.35);
+}
+
+header h2 {
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin-top: 10px;
+}
+
+/* =======================
+   Navigation (Desktop)
+======================= */
+nav {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 6px 14px;
+  border: 1px solid rgba(31, 140, 255, 0.35);
+  border-radius: 6px;
+  transition: 0.25s ease;
+}
+
+nav a:hover {
+  background: rgba(31, 140, 255, 0.15);
+  color: #ffffff;
+  box-shadow: var(--glow);
+}
+
+/* =======================
+   Hamburger Menu Button
+======================= */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 1px solid rgba(31, 140, 255, 0.5);
+  color: var(--accent);
+  font-size: 1.6rem;
+  padding: 4px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.menu-toggle::before {
+  content: "☰";
+  transition: 0.25s ease;
+}
+
+.menu-toggle.active::before {
+  content: "✖";
+  transform: rotate(90deg);
+}
+
+.menu-toggle:hover {
+  box-shadow: var(--glow);
+}
+
+/* =======================
+   Sections
+======================= */
+section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* =======================
+   Cards
+======================= */
+.card {
+  background: linear-gradient(
+    180deg,
+    rgba(10, 25, 45, 0.75),
+    rgba(5, 15, 30, 0.85)
+  );
+  border: 1px solid rgba(31, 140, 255, 0.35);
+  border-radius: 12px;
+  padding: 22px;
+  margin: 18px 0;
+  box-shadow: var(--glow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 22px;
+  width: 4px;
+  height: 42px;
+  background: linear-gradient(
+    180deg,
+    #1f8cff,
+    rgba(31, 140, 255, 0.4)
+  );
+  border-radius: 4px;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(31, 140, 255, 0.35);
+}
+
+.card h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+}
+
+.card ul {
+  list-style: none;
+}
+
+.card li {
+  padding: 6px 0;
+  font-size: 0.92rem;
+  color: #dbeaff;
+}
+
+/* =======================
+   Buttons
+======================= */
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid rgba(31, 140, 255, 0.5);
+  color: var(--accent);
+  text-decoration: none;
+  border-radius: 6px;
+  margin-top: 10px;
+  transition: 0.25s ease;
+}
+
+.btn:hover {
+  background: rgba(31, 140, 255, 0.2);
+  color: #ffffff;
+  box-shadow: var(--glow);
+}
+
+/* =======================
+   Certificate Gallery
+======================= */
+.cert-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.cert-item {
+  border: 1px solid rgba(31, 140, 255, 0.4);
+  border-radius: 12px;
+  padding: 10px;
+  background: rgba(5, 15, 30, 0.9);
+  text-align: center;
+  box-shadow: var(--glow);
+  transition: transform 0.25s ease;
+}
+
+.cert-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid rgba(31, 140, 255, 0.35);
+}
+
+.cert-item p {
+  margin-top: 8px;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.cert-item:hover {
+  transform: scale(1.04);
+}
+
+/* =======================
+   Footer
+======================= */
+footer {
+  text-align: center;
+  padding: 16px;
+  border-top: 1px solid rgba(31, 140, 255, 0.35);
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 30px;
+}
+
+/* =======================
+   Typing Effect
+======================= */
+.typing {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid var(--accent);
+  animation: typing 3s steps(20), blink 0.7s infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* =======================
+   Mobile Responsive + Menu
+======================= */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    margin-top: 15px;
+    gap: 8px;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  nav a {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  header h2 {
+    font-size: 0.85rem;
+  }
+
+  section {
+    padding: 25px 15px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+}

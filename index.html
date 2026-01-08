@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kamesh | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="nav-header">
+      <h1>&lt;Kamesh S /&gt;</h1>
+
+      <!-- Mobile Hamburger -->
+      <button class="menu-toggle" onclick="toggleMenu()"></button>
+    </div>
+
+    <h2>Cybersecurity Enthusiast | Developer | CTF Player</h2>
+
+    <nav id="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="skills.html">Skills</a>
+      <a href="certificates.html">Certificates</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="terminal-box">
+    <h2>Professional Summary</h2>
+
+    <p>
+      I am <strong>Kamesh</strong>, a motivated <strong>Cybersecurity Enthusiast and Developer</strong>
+      with hands-on experience in programming, security testing, and CTF challenges.
+    </p>
+
+    <p>
+      My core skills include <strong>C, C++, Python, Bash, HTML, CSS, and JavaScript</strong>,
+      along with experience using <strong>Burp Suite, Nmap, Metasploit, Wireshark, and Hashcat</strong>.
+    </p>
+
+    <p>
+      I actively improve my skills through CTF competitions and practical security research,
+      with a strong interest in <strong>web security and offensive security</strong>.
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2025 Kamesh | Cybersecurity Portfolio</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("nav-menu");
+      const btn = document.querySelector(".menu-toggle");
+
+      nav.classList.toggle("show");
+      btn.classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>

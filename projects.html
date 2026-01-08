@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Kamesh</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="nav-header">
+      <h1>Projects</h1>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="menu-toggle" onclick="toggleMenu()"></button>
+    </div>
+
+    <h2>Cybersecurity & Development Work</h2>
+
+    <nav id="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="skills.html">Skills</a>
+      <a href="certificates.html">Certificates</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section>
+    <div class="grid">
+
+      <div class="card">
+        <h3>🔐 CTF Platform</h3>
+        <p>
+          Web-based platform designed for practicing cybersecurity challenges
+          and Capture The Flag competitions.
+        </p>
+        <a class="btn" href="https://vhpctf.onrender.com/" target="_blank">Live Demo</a>
+        <a class="btn" href="https://github.com/kamesh-the-hacker/CTF" target="_blank">GitHub</a>
+      </div>
+
+      <div class="card">
+        <h3>🕵️ AresVuln – Web Vulnerability Scanner</h3>
+        <p>
+          GUI-based security tool for identifying common web vulnerabilities
+          such as SQL Injection and Cross-Site Scripting (XSS).
+        </p>
+        <a class="btn" href="https://github.com/kamesh-the-hacker/AresVuln" target="_blank">GitHub</a>
+      </div>
+
+      <div class="card">
+        <h3>💻 Billing Software</h3>
+        <p>
+          Python-based billing and inventory management system
+          with automated calculations and record handling.
+        </p>
+        <a class="btn" href="https://github.com/kamesh-the-hacker/BILLING-SOFTWARE" target="_blank">GitHub</a>
+      </div>
+
+      <div class="card">
+        <h3>🕵️ KratosK – Backdoor (Educational)</h3>
+        <p>
+          Python-based educational backdoor demonstrating
+          remote administration concepts for cybersecurity research.
+        </p>
+        <a class="btn" href="https://github.com/kamesh-the-hacker/kratos-k" target="_blank">GitHub</a>
+      </div>
+
+      <div class="card">
+        <h3>🔐 Bomb Puzzle (CTF Challenge)</h3>
+        <p>
+          Timed reverse-engineering puzzle requiring
+          correct input sequences to retrieve the flag.
+        </p>
+        <a class="btn" href="https://kamesh-the-hacker.github.io/bomb-puzzle/" target="_blank">Live Demo</a>
+        <a class="btn" href="https://github.com/kamesh-the-hacker/bomb-puzzle" target="_blank">GitHub</a>
+      </div>
+
+      <div class="card">
+        <h3>🕵️ KrPortScan</h3>
+        <p>
+          Lightweight multi-threaded port scanner with
+          service enumeration, banner grabbing, and basic fingerprinting.
+        </p>
+        <a class="btn" href="https://github.com/kamesh-the-hacker/kport-scan" target="_blank">GitHub</a>
+      </div>
+
+      <div class="card">
+        <h3>🕵️ Krypt0Kamesh</h3>
+        <p>
+          Python-based encryption and decryption tool supporting
+          multiple cryptographic algorithms for learning secure data handling.
+        </p>
+        <a class="btn" href="https://github.com/kamesh-the-hacker/krypt0kamesh" target="_blank">GitHub</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Kamesh | Cybersecurity Portfolio</p>
+  </footer>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("nav-menu");
+      const btn = document.querySelector(".menu-toggle");
+
+      nav.classList.toggle("show");
+      btn.classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>
